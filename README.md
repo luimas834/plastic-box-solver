@@ -13,7 +13,23 @@ An interactive 3D Rubik's Cube application featuring optimal solving algorithms,
 
 ---
 
-### Option 1: Local Development (Recommended)
+### Option 1: Run with Docker Compose (Recommended)
+
+To spin up PostgreSQL, the FastAPI backend, and the Vite frontend in synchronized containers:
+
+```bash
+# From repository root
+docker compose up --build
+```
+
+- Frontend: `http://localhost:5173`
+- Backend API: `http://localhost:8000`
+- PostgreSQL: `localhost:5433`
+
+
+---
+
+### Option 2: Local Development
 
 #### 1. Start the Backend API
 ```bash
@@ -45,21 +61,6 @@ npm install
 npm run dev
 ```
 Open your browser and navigate to `http://localhost:5173`.
-
----
-
-### Option 2: Run with Docker Compose
-
-To spin up PostgreSQL, the FastAPI backend, and the Vite frontend in synchronized containers:
-
-```bash
-# From repository root
-docker compose up --build
-```
-
-- Frontend: `http://localhost:5173`
-- Backend API: `http://localhost:8000`
-- PostgreSQL: `localhost:5433`
 
 ---
 
